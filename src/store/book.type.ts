@@ -12,3 +12,9 @@ export type TPairBook={
 export type TBook = {
     [key: string]: TPairBook
 }
+
+export type TBookData={
+    pair:string,
+    chanelId:number,
+    tips:TBookItem[]
+}

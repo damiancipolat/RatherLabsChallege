@@ -1,43 +1,36 @@
 import {
-    checkItemTuple,
-    checkBookFormat
-} from '../message/validators';  
-  
+  checkItemTuple,
+  checkBookFormat,
+} from './validators';
+
 describe('Message validations', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    jest.resetModules();
+  });
 
-    beforeEach(() => {
-        jest.clearAllMocks();
-        jest.resetModules();
-    });
-    
-    afterEach(() => {
-        jest.clearAllMocks();
-        jest.resetModules();
-    });
+  afterEach(() => {
+    jest.clearAllMocks();
+    jest.resetModules();
+  });
 
-    it('CheckItemTuple false', () => {
-        const result = checkItemTuple([1,2,'a']);
-        expect(result).toBeTruthy;
-    });
+  it('CheckItemTuple false', () => {
+    expect(checkItemTuple([1, 2, 'a'])).toBeTruthy;
+  });
 
-    it('CheckItemTuple true', () => {
-        const result = checkItemTuple([1,2,3]);
-        expect(result).toBeTruthy;
-    });
+  it('CheckItemTuple true', () => {
+    expect(checkItemTuple([1, 2, 3])).toBeTruthy;
+  });
 
-    it('checkBookFormat bad format', () => {
-        const result = checkBookFormat([1,'a']);
-        expect(result).toBeFalsy;
-    });
+  it('checkBookFormat bad format', () => {
+    expect(checkBookFormat([1, 'a'])).toBeFalsy;
+  });
 
-    it('checkBookFormat good format 1', () => {
-        const result = checkBookFormat([1,[[1,2,3],[1,2]]]);
-        expect(result).toBeTruthy;
-    });
+  it('checkBookFormat good format 1', () => {
+    expect(checkBookFormat([1, [[1, 2, 3], [1, 2]]])).toBeTruthy;
+  });
 
-    it('checkBookFormat good format 2', () => {
-        const result = checkBookFormat([1,[[1,2,3],[1,2,3]]]);
-        expect(result).toBeFalsy;
-    });
-
+  it('checkBookFormat good format 2', () => {
+    expect(checkBookFormat([1, [[1, 2, 3], [1, 2, 3]]])).toBeFalsy;
+  });
 });
