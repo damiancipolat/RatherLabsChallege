@@ -1,18 +1,6 @@
-import {
-  clear,
-  fill,
-  all,
-  get,
-  removeFromArray,
-  purgeLimit,
-  increaseBids,
-  increaseAsks,
-  decreaseBids,
-  decreaseAsks
-} from './book';
+import book from './book';
 
 describe('Store test', () => {
-
   beforeEach(() => {
     jest.clearAllMocks();
     jest.resetModules();
@@ -23,186 +11,177 @@ describe('Store test', () => {
     jest.resetModules();
   });
 
-  it('clear store', () => {    
-    
-    fill(['ARS_USD','BTC_ARS']);
-    clear();
-    const book = all();
+  it('clear store', () => {
+    book.fill(['ARS_USD', 'BTC_ARS']);
+    book.clear();
+    const bookTmp = book.all();
 
-    expect(book).toStrictEqual({});
-
+    expect(bookTmp).toStrictEqual({});
   });
 
   it('fill store with money list', () => {
-    
-    clear();
-    fill(['ARS_USD','BTC_ARS']);
-    const book = all();
-    const compare={
-      ARS_USD:{
-        bids:[],
-        asks:[]
+    book.clear();
+    book.fill(['ARS_USD', 'BTC_ARS']);
+    const bookTmp = book.all();
+    const compare = {
+      ARS_USD: {
+        bids: [],
+        asks: [],
       },
-      BTC_ARS:{
-        bids:[],
-        asks:[]
-      }
+      BTC_ARS: {
+        bids: [],
+        asks: [],
+      },
     };
 
-    expect(book).toStrictEqual(compare);
-
+    expect(bookTmp).toStrictEqual(compare);
   });
 
   it('get all the store data', () => {
-    clear();
-    fill(['BTCUSD']);
-    const book = all();
-    const compare={
-      BTCUSD:{
-        bids:[],
-        asks:[]
-      }
+    book.clear();
+    book.fill(['BTCUSD']);
+    const bookTmp = book.all();
+    const compare = {
+      BTCUSD: {
+        bids: [],
+        asks: [],
+      },
     };
 
-    expect(book).toStrictEqual(compare);
+    expect(bookTmp).toStrictEqual(compare);
   });
-  
+
   it('get pair from name', () => {
-    clear();
-    fill(['BTCUSD']);
-    const btcusd = get('BTCUSD');
-    const compare={
-        bids:[],
-        asks:[]
+    book.clear();
+    book.fill(['BTCUSD']);
+    const btcusd = book.get('BTCUSD');
+    const compare = {
+      bids: [],
+      asks: [],
     };
 
     expect(btcusd).toStrictEqual(compare);
   });
 
   it('remove from array', () => {
-    const mock = ['a','b','c','d','e'];
-    const result = removeFromArray(mock,'c');
-    const compare = ['a','b','d','e'];
+    const mock = ['a', 'b', 'c', 'd', 'e'];
+    const result = book.removeFromArray(mock, 'c');
+    const compare = ['a', 'b', 'd', 'e'];
 
     expect(result).toStrictEqual(compare);
   });
 
   it('purgeLimit', () => {
-    const mock = ['a','b','c','d','e'];
-    const result = removeFromArray(mock,'c');
-    const compare = ['a','b','d','e'];
+    const mock = ['a', 'b', 'c', 'd', 'e'];
+    const result = book.removeFromArray(mock, 'c');
+    const compare = ['a', 'b', 'd', 'e'];
 
     expect(result).toStrictEqual(compare);
   });
 
   it('include new bid in the store', () => {
-
     const item = {
-      PRICE:20000,
-      COUNT:10,
-      AMOUNT:1000
+      PRICE: 20000,
+      COUNT: 10,
+      AMOUNT: 1000,
     };
 
-    //Clear, fill the store.
-    clear();
-    fill(['btcusd']);
+    // Clear, fill the store.
+    book.clear();
+    book.fill(['btcusd']);
 
-    //Include new item.
-    increaseBids('btcusd',item);
-    const book = get("btcusd");
+    // Include new item.
+    book.increaseBids('btcusd', item);
+    const bookTmp = book.get('btcusd');
 
-    expect(book.bids).toStrictEqual([item]);
+    expect(bookTmp.bids).toStrictEqual([item]);
   });
 
   it('include new ask in the store', () => {
-
     const item = {
-      PRICE:20000,
-      COUNT:10,
-      AMOUNT:1000
+      PRICE: 20000,
+      COUNT: 10,
+      AMOUNT: 1000,
     };
 
-    //Clear, fill the store.
-    clear();
-    fill(['btcusd']);
+    // Clear, fill the store.
+    book.clear();
+    book.fill(['btcusd']);
 
-    //Include new item.
-    increaseAsks('btcusd',item);
-    const book = get("btcusd");
+    // Include new item.
+    book.increaseAsks('btcusd', item);
+    const bookTmp = book.get('btcusd');
 
-    expect(book.asks).toStrictEqual([item]);
-  });    
-  
+    expect(bookTmp.asks).toStrictEqual([item]);
+  });
+
   it('decrease bid in the store', () => {
-
     const item1 = {
-      PRICE:20000,
-      COUNT:10,
-      AMOUNT:1000
+      PRICE: 20000,
+      COUNT: 10,
+      AMOUNT: 1000,
     };
 
     const item2 = {
-      PRICE:30000,
-      COUNT:100,
-      AMOUNT:100
+      PRICE: 30000,
+      COUNT: 100,
+      AMOUNT: 100,
     };
 
     const item3 = {
-      PRICE:30,
-      COUNT:10,
-      AMOUNT:4400
-    };    
+      PRICE: 30,
+      COUNT: 10,
+      AMOUNT: 4400,
+    };
 
-    //Clear, fill the store.
-    clear();
-    fill(['btcusd']);
+    // Clear, fill the store.
+    book.clear();
+    book.fill(['btcusd']);
 
-    //Include new item.
-    increaseBids('btcusd',item1);
-    increaseBids('btcusd',item2);
-    increaseBids('btcusd',item3);
+    // Include new item.
+    book.increaseBids('btcusd', item1);
+    book.increaseBids('btcusd', item2);
+    book.increaseBids('btcusd', item3);
 
-    //Remove bid.
-    const book = get("btcusd");
-    decreaseBids("btcusd",item2);   
+    // Remove bid.
+    const bookTmp = book.get('btcusd');
+    book.decreaseBids('btcusd', item2);
 
-    expect(book.bids).toStrictEqual([item1,item3]);
+    expect(bookTmp.bids).toStrictEqual([item1, item3]);
   });
 
   it('decrease asks in the store', () => {
-
     const item1 = {
-      PRICE:20000,
-      COUNT:10,
-      AMOUNT:1000
+      PRICE: 20000,
+      COUNT: 10,
+      AMOUNT: 1000,
     };
 
     const item2 = {
-      PRICE:30000,
-      COUNT:100,
-      AMOUNT:100
+      PRICE: 30000,
+      COUNT: 100,
+      AMOUNT: 100,
     };
 
     const item3 = {
-      PRICE:30,
-      COUNT:10,
-      AMOUNT:4400
-    };    
+      PRICE: 30,
+      COUNT: 10,
+      AMOUNT: 4400,
+    };
 
-    //Clear, fill the store.
-    clear();
-    fill(['btcusd']);
+    // Clear, fill the store.
+    book.clear();
+    book.fill(['btcusd']);
 
-    //Include new item.
-    increaseAsks('btcusd',item1);
-    increaseAsks('btcusd',item2);
-    increaseAsks('btcusd',item3);
+    // Include new item.
+    book.increaseAsks('btcusd', item1);
+    book.increaseAsks('btcusd', item2);
+    book.increaseAsks('btcusd', item3);
 
-    //Remove bid.
-    const book = get("btcusd");
-    decreaseAsks("btcusd",item2);   
+    // Remove bid.
+    const bookTmp = book.get('btcusd');
+    book.decreaseAsks('btcusd', item2);
 
-    expect(book.asks).toStrictEqual([item1,item3]);
-  });    
-
+    expect(bookTmp.asks).toStrictEqual([item1, item3]);
+  });
 });

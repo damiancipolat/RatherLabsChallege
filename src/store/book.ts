@@ -9,10 +9,10 @@ import config from '../config';
 let BOOK:TBook = {};
 const PAIR_MAX:any = config.store.limit;
 
-//CLear the store.
-const clear = ()=>{
-  BOOK={};
-}
+// CLear the store.
+const clear = () => {
+  BOOK = {};
+};
 
 // Initializae memory in book with pair-name money from list.
 const fill = (pairList:string[]) => {
@@ -70,7 +70,7 @@ const decreaseAsks = (pair:string, item:TBookItem) => {
   pairStore.asks = removeFromArray(pairStore.asks, item);
 };
 
-export {
+export default {
   fill,
   get,
   clear,
@@ -80,5 +80,5 @@ export {
   decreaseAsks,
   decreaseBids,
   removeFromArray,
-  purgeLimit
+  purgeLimit,
 };

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1648926791050" clover="3.2.0">
+  <project timestamp="1648926791050" name="All files">
+    <metrics statements="47" coveredstatements="39" conditionals="10" coveredconditionals="4" methods="15" coveredmethods="12" elements="72" coveredelements="55" complexity="0" loc="47" ncloc="47" packages="3" files="3" classes="3"/>
+    <package name="config">
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/damian/proyectos/challenges/RatherLabsChallege/src/config/index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="consumer.biz">
+      <metrics statements="18" coveredstatements="10" conditionals="6" coveredconditionals="2" methods="3" coveredmethods="1"/>
+      <file name="bidasks.ts" path="/home/damian/proyectos/challenges/RatherLabsChallege/src/consumer/biz/bidasks.ts">
+        <metrics statements="18" coveredstatements="10" conditionals="6" coveredconditionals="2" methods="3" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="store">
+      <metrics statements="27" coveredstatements="27" conditionals="2" coveredconditionals="0" methods="12" coveredmethods="11"/>
+      <file name="book.ts" path="/home/damian/proyectos/challenges/RatherLabsChallege/src/store/book.ts">
+        <metrics statements="27" coveredstatements="27" conditionals="2" coveredconditionals="0" methods="12" coveredmethods="11"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="12" type="stmt"/>
+        <line num="28" count="19" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="34" count="16" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="44" count="5" type="stmt"/>
+        <line num="47" count="5" type="cond" truecount="0" falsecount="1"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="5" type="stmt"/>
+        <line num="55" count="5" type="stmt"/>
+        <line num="58" count="5" type="cond" truecount="0" falsecount="1"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
