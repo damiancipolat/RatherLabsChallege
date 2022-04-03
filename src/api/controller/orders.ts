@@ -43,10 +43,7 @@ const getPrices = (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-/* eslint-disable import/prefer-default-export */
-export {
-  getPrices,
-};
+export default getPrices;
 
 /*
 import {

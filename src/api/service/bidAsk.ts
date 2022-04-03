@@ -7,7 +7,6 @@ const getBestBid = (bids:TBookItem[]):TBookItem => {
 
 const getBestAsk = (asks:TBookItem[]):TBookItem => {
   asks.sort((a:TBookItem, b:TBookItem) => ((a.PRICE < b.PRICE) ? -1 : 1));
-  console.log(asks);
   return asks[0];
 };
 
