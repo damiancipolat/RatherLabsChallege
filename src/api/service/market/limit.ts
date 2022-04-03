@@ -14,7 +14,7 @@ const calcBuy:ICalculate = (pair:TPairBook, amount:number, limit:number|undefine
   // Filter and order the orders.
   const result:TBookItem[] = pair.bids
     .filter((order:TBookItem) => order.PRICE < priceLimit)
-    .sort((x, y) => (x.PRICE < y.PRICE ? -1 : 1));
+    .sort((x, y) => (x.PRICE < y.PRICE ? 1 : -1));
 
   return result.length > 0 ? result[0].COUNT : 0;
 };
@@ -26,8 +26,8 @@ const calcSell:ICalculate = (pair:TPairBook, amount:number, limit:number|undefin
 
   // Filter and order the orders.
   const result:TBookItem[] = pair.asks
-    .filter((order:TBookItem) => order.PRICE < priceLimit)
-    .sort((x, y) => (x.PRICE < y.PRICE ? -1 : 1));
+    .filter((order:TBookItem) => order.PRICE > priceLimit)
+    .sort((x, y) => (x.PRICE > y.PRICE ? 1 : -1));
 
   return result.length > 0 ? result[0].COUNT : 0;
 };
