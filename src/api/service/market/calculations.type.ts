@@ -5,7 +5,7 @@ import {
 } from '../../../store/book.type';
 
 interface ICalculate {
-  (pair:TPairBook, amount:number): number;
+  (pair:TPairBook, amount:number, limit?:number): number;
 }
 
 export default ICalculate;
