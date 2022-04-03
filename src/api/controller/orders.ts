@@ -44,20 +44,3 @@ const getPrices = (req: Request, res: Response, next: NextFunction) => {
 };
 
 export default getPrices;
-
-/*
-import {
-  getBestAsk,
-  getBestBid
-} from './api/service/bidAsk';
-
-const tmp = [
-  { PRICE: 100, COUNT: 2, AMOUNT: -0.346219 },
-  { PRICE: 2, COUNT: 1, AMOUNT: -0.26480692 },
-  { PRICE: 5, COUNT: 1, AMOUNT: -0.00203984 },
-  { PRICE: 1000, COUNT: 3, AMOUNT: -1.44216749 }];
-
-const result = getBestAsk(tmp);
-console.log('xxx',result);
-
-*/

@@ -53,6 +53,7 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
+      "!./build/**",
       "./src/**"
     ]
   }
