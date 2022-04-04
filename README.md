@@ -55,10 +55,14 @@ The project is divided into several layers, each with different responsibilities
 
 - **Comsumer**: Get data from the socket and keep the book updated in memory, separated by buy and sell.
 - **Api**: HTTP interface to obtain the different features proposed.
+- **Memory (Store)**: In this layer we store the data obtained from the bitfinex provider through the websocket..
+
+#### Layer diagrams:
+Here we see the main layers of the project.
+
+<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/layers.png?raw=true" width="350px" align="right" />
 
 <img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="150px" align="right" />
-<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/layers.png?raw=true" width="150px" align="right" />
-
 
 
 http://127.0.0.1:8000/orders/tBTCUSD/prices
