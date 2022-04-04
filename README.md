@@ -2,6 +2,7 @@
 
 # RatherLabs challenge - Membrane
 In this challenge I solve the statement proposed in the following pdf, which consists of creating a market status api.
+https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/challenge.pdf
 
 - [Decitions](#exchange-provider)
 - [Stack](#stack)
