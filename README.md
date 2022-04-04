@@ -121,6 +121,6 @@ curl 'http://127.0.0.1:8000/market/execute/tBTCUSD/SELL/0.5'
 Receive a pair name a operation, ammount, limit and return the price if the order is executed, format: `'http://127.0.0.1:8000/market/execute/:pair-name/[BUY/SELL]/:ammount/limit/:limit-ammount'`
 
 ```console
-http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5/limit/100
-http://127.0.0.1:8000/market/execute/tBTCUSD/SELL/0.5/limit/100
+curl 'http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5/limit/100'
+curl 'http://127.0.0.1:8000/market/execute/tBTCUSD/SELL/0.5/limit/100'
 ```
