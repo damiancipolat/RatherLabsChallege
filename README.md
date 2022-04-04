@@ -73,6 +73,7 @@ Here we see the component of every layers of the project.
 Here are examples of how to use the requested endpoints.
 
 - **1) Receive a pair name and retrieve the bid-ask prices**:
+
 Format: `'http://127.0.0.1:8000/orders/:pair-name/prices'`
 
 ```console
