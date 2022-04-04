@@ -3,7 +3,7 @@
 # RatherLabs challenge - Membrane
 In this challenge I solve the statement proposed in the following pdf, which consists of creating a market status api.
 
-### **Stack**:
+## **Stack**:
 - Node.js v16
 - Docker
 - Test: jest
@@ -11,7 +11,7 @@ In this challenge I solve the statement proposed in the following pdf, which con
 - express.js
 - pino: For logging.
 
-### **Configuration**:
+## **Configuration**:
 The project uses .env files to handle the configuration, the format is as follows.
 
 ```console
@@ -25,7 +25,7 @@ TIPS_LIMIT=50
 SERVER_PORT=8000
 ```
 
-### **Comands**:
+## **Comands**:
 These are several useful commands to run the project.
 
 - Run unit test:
@@ -50,12 +50,14 @@ damian@challenge:~$ npm start
 damian@challenge:~$ npm run build
 ```
 
-### **Architecture**:
+## **Architecture**:
 The project is divided into several layers, each with different responsibilities. Three stand out **consumer** / **memory** / **api server**.
 
 - **Comsumer**: Get data from the socket and keep the book updated in memory, separated by buy and sell.
 - **Api**: HTTP interface to obtain the different features proposed.
-- **Memory (Store)**: In this layer we store the data obtained from the bitfinex provider through the websocket..
+- **Memory (Store)**: In this layer we store the data obtained from the bitfinex provider through the websocket.
+- **Configuration**: Here I centralize the configuration from which the api or the consumer obtained information
+- **Utilis:** Cross functionality, only the logger is found.
 
 #### **Layer diagrams**:
 Here we see the main layers of the project.
@@ -67,7 +69,7 @@ Here we see the component of every layers of the project.
 
 <img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="550px" />
 
-sdsadsadsad
+## **Endpoints**:
 
 
 
