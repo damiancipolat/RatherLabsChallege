@@ -59,10 +59,12 @@ The project is divided into several layers, each with different responsibilities
 
 #### **Layer diagrams**:
 Here we see the main layers of the project.
+
 <img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/layers.png?raw=true" width="250px" />
 
 #### **Component diagrams**:
 Here we see the component of every layers of the project.
+
 <img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="250px" />
 
 sdsadsadsad
