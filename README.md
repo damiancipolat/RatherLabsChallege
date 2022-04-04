@@ -50,6 +50,14 @@ damian@challenge:~$ npm start
 damian@challenge:~$ npm run build
 ```
 
+### **Architecture**:
+The project is divided into several layers, each with different responsibilities. Three stand out **consumer** / **memory** / **api server**.
+
+- **Comsumer**: Get data from the socket and keep the book updated in memory, separated by buy and sell.
+- **Api**: HTTP interface to obtain the different features proposed.
+
+<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="150px" align="right" />
+<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/layers.png?raw=true" width="150px" align="right" />
 
 
 
