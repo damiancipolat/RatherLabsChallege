@@ -1,11 +1,13 @@
+import logger from './utils/logger';
+
 import {
   boostrap,
 } from './consumer';
 
 import createApi from './api';
 
-console.log('Starting consumer...');
+logger.info('CONSUMER: starting...');
 boostrap();
 
-console.log('Starting Api...');
+logger.info('API: starting');
 createApi();

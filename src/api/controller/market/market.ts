@@ -1,4 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
+import logger from '../../../utils/logger';
+
 import config from '../../../config';
 
 import book from '../../../store/book';
@@ -36,6 +38,8 @@ const calcExecution = (req: Request, res: Response, next: NextFunction) => {
       operation,
       ammount,
     } = req.params;
+
+    logger.info(`API: Request to simulate execution - market prices pair:${pair} operation:${operation}...`);
 
     if (!moneys.includes(pair)) throw new Error('Pair name not valid');
 

@@ -1,4 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
+import logger from '../../../utils/logger';
+
 import config from '../../../config';
 
 import ICalculate from '../../service/market/calculations.type';
@@ -39,6 +41,8 @@ const calcLimit = (req: Request, res: Response, next: NextFunction) => {
       limit,
     } = req.params;
 
+    logger.info(`API: Request to calculate limit prices pair:${pair} operation:${operation}...`);
+
     if (!moneys.includes(pair)) throw new Error('Pair name not valid');
 
     // Find the order items by pair-name.
@@ -59,7 +63,6 @@ const calcLimit = (req: Request, res: Response, next: NextFunction) => {
       count,
     });
   } catch (err) {
-    console.log(err);
     next(err);
   }
 };

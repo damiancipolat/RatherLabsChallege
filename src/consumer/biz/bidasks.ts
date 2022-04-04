@@ -3,6 +3,7 @@ import {
 } from '../../store/book.type';
 
 import book from '../../store/book';
+import logger from '../../utils/logger';
 
 // Handle the process to decrease the bids.
 const bidAskIncrease = (bookItem:TBookItem, pair:string) => {
@@ -32,7 +33,7 @@ const bidAskLogic = (bookItem:TBookItem, pair:string) => {
     AMOUNT,
   } = bookItem;
 
-  console.log(`With values ${PRICE}:${COUNT}:${AMOUNT}`);
+  logger.debug(`CONSUMER: ${pair}} Received value ${PRICE}:${COUNT}:${AMOUNT}`);
 
   if (COUNT > 0) bidAskIncrease({ PRICE, COUNT, AMOUNT }, pair);
 

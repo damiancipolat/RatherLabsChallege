@@ -1,4 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
+import logger from '../../utils/logger';
+
 import config from '../../config';
 
 import book from '../../store/book';
@@ -22,6 +24,8 @@ const getPrices = (req: Request, res: Response, next: NextFunction) => {
       pair,
     } = req.params;
 
+    logger.info(`API: Request to get prices ${pair}...`);
+
     if (!moneys.includes(pair)) throw new Error('Pair name not valid');
 
     // Find the order items by pair-name.
@@ -38,7 +42,6 @@ const getPrices = (req: Request, res: Response, next: NextFunction) => {
       ask: askPrice,
     });
   } catch (err) {
-    console.log(err);
     next(err);
   }
 };

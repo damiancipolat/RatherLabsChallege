@@ -2,9 +2,14 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const config_1 = __importDefault(require("../config"));
-const BOOK = {};
+let BOOK = {};
 const PAIR_MAX = config_1.default.store.limit;
+// CLear the store.
+const clear = () => {
+    BOOK = {};
+};
 // Initializae memory in book with pair-name money from list.
 const fill = (pairList) => {
     pairList.forEach((pair) => {
@@ -50,12 +55,15 @@ const decreaseAsks = (pair, item) => {
     const pairStore = get(pair);
     pairStore.asks = removeFromArray(pairStore.asks, item);
 };
-module.exports = {
+exports.default = {
     fill,
     get,
+    clear,
     all,
     increaseAsks,
     increaseBids,
     decreaseAsks,
     decreaseBids,
+    removeFromArray,
+    purgeLimit,
 };

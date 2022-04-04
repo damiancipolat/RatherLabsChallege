@@ -3,6 +3,7 @@ import {
 } from '../store/book.type';
 
 import book from '../store/book';
+import logger from '../utils/logger';
 
 import {
   TSocketData,
@@ -32,13 +33,13 @@ const updateBook = (bookData:TBookData) => {
 
   // Validate if the pair-name exists.
   if (!pairInfo) {
-    console.log(`Pair name ${pair} not found in book, unable to store.`);
+    logger.info(`CONSUMER: Pair name ${pair} not found in book, unable to store.`);
     return null;
   }
 
   // Process tips.
   if (Array.isArray(tips) && tips.length > 0) {
-    console.log(`Updating pair ${pair}.`);
+    logger.info(`CONSUMER: Updating pair ${pair}.`);
     tips.forEach((tip) => bidAskLogic(tip, pair));
     return tips;
   }
@@ -60,10 +61,10 @@ const onMessage = (message:{pair:string, msg:TSocketData}) => {
       const parsed = parseBookData(pair, payload);
       updateBook(parsed);
     } else {
-      console.log('Invalid format');
+      logger.error(`CONSUMER: ${pair} invalid message format`);
     }
   } catch (err) {
-    console.log(err);
+    logger.error(`CONSUMER: ${(err as Error).message}`);
   }
 };
 

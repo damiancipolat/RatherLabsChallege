@@ -1,6 +1,8 @@
 // Load .env files.
 import 'dotenv/config';
 
+import logger from '../utils/logger';
+
 import {
   moneys,
   provider,
@@ -24,7 +26,7 @@ const sockets:any = {};
 // Create a map pair-name:socket.
 const createSockets = () => {
   moneys.forEach((money) => {
-    console.log(`Register socket for pair - ${money}`);
+    logger.debug(`CONSUMER: Register socket for pair - ${money}`);
     sockets[money] = socketBuilder(money, onMessage, host);
   });
 };

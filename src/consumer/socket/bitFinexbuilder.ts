@@ -1,5 +1,6 @@
 import ws from 'ws';
 import { TSocketData } from './socket.type';
+import logger from '../../utils/logger';
 
 // Function that create a event emmiter to communicate with the provicers socket.
 const exchangeBuilder = (pair:string, msgHandler:any, host:any) => {
@@ -7,7 +8,7 @@ const exchangeBuilder = (pair:string, msgHandler:any, host:any) => {
   const socket = new ws(host);
 
   socket.on('open', () => {
-    console.log('Socket open to:', pair);
+    logger.info(`CONSUMER: Socket open to: - ${pair}`);
 
     const subscription = JSON.stringify({
       event: 'subscribe',
