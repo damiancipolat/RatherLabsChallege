@@ -35,7 +35,7 @@ TIPS_LIMIT=50
 SERVER_PORT=8000
 ```
 
-## **Comands**:
+## **Commands**:
 These are several useful commands to run the project.
 
 - Run unit test:
