@@ -35,6 +35,19 @@ TIPS_LIMIT=50
 SERVER_PORT=8000
 ```
 
+**Money pair-names**:
+You can configure the pair names in the file: `'/src/config/index.ts'`.
+
+```console
+  moneys: [
+    'tBTCUSD',
+    'tETHUSD',
+  ],
+```
+**Note**: Trading pairs are prepended by a “t” before the pair (e.g. tBTCUSD, tETHUSD, ...), the project only works with bitfinex supported **trading pairs**.
+https://docs.bitfinex.com/docs/ws-general
+
+
 ## **Commands**:
 These are several useful commands to run the project.
 
