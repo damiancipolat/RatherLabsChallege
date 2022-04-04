@@ -57,13 +57,17 @@ The project is divided into several layers, each with different responsibilities
 - **Api**: HTTP interface to obtain the different features proposed.
 - **Memory (Store)**: In this layer we store the data obtained from the bitfinex provider through the websocket..
 
-#### Layer diagrams:
+#### **Layer diagrams**:
 Here we see the main layers of the project.
 <img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/layers.png?raw=true" width="250px" />
 
+#### **Component diagrams**:
+Here we see the component of every layers of the project.
+<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="250px" />
+
 sdsadsadsad
 
-<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="150px" />
+
 
 http://127.0.0.1:8000/orders/tBTCUSD/prices
 http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5
