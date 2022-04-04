@@ -72,14 +72,21 @@ Here we see the component of every layers of the project.
 ## **Endpoints**:
 Here are examples of how to use the requested endpoints.
 
-- **1) Receive a pair name and retrieve the bid-ask prices**:
+- **1) BID ASK**:
 
-Format: `'http://127.0.0.1:8000/orders/:pair-name/prices'`
+Receive a parir name and retrieve bid-ask prices, format: `'http://127.0.0.1:8000/orders/:pair-name/prices'`
 
 ```console
 curl 'http://127.0.0.1:8000/orders/tBTCUSD/prices'
 ```
 
+- **2) Simulate order execution**:
+
+Receive a parir name a operation and ammount and return the price if the order is executed, format: `'http://127.0.0.1:8000/market/execute/:pair-name/[BUY/SELL]/:ammount'`
+
+```console
+curl 'http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5'
+```
 
 
 
