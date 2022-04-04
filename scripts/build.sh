@@ -1,6 +1,3 @@
-echo "Tageando version..."
-sh ./tag.sh
-
 echo "Borrando container..."
 docker stop challenge-api-server
 docker rm challenge-api-server

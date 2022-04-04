@@ -6,7 +6,7 @@
   "scripts": {
     "docker:build": "sh ./scripts/build.sh",
     "build": "tsc",
-    "start": "node build/index.js",
+    "start": "node ./dist/index.js",
     "dev": "ts-node ./src/index.ts",
     "test": "jest",
     "coverage": "jest --coverage",
@@ -58,7 +58,7 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
     "testPathIgnorePatterns" : [
-      "./build/"
+      "./dist/"
     ],
     "collectCoverageFrom": [
       "./src/**",

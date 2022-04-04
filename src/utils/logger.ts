@@ -1,8 +1,7 @@
 import logger from 'pino';
-import pckg from '../../package.json';
 
 export default logger({
-  name: pckg.name,
+  name: 'challenge-rather',
   level: 'debug',
   transport: {
     target: 'pino-pretty',
