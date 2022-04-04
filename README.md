@@ -70,6 +70,15 @@ Here we see the component of every layers of the project.
 <img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="550px" />
 
 ## **Endpoints**:
+Here are examples of how to use the requested endpoints.
+
+- **1) Receive a pair name and retrieve the bid-ask prices**:
+Format: `'http://127.0.0.1:8000/orders/:pair-name/prices'`
+
+```console
+curl 'http://127.0.0.1:8000/orders/tBTCUSD/prices'
+```
+
 
 
 
