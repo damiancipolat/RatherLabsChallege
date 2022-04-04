@@ -17,7 +17,7 @@ https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/challenge.pdf
 For this challenge, I decided to use the bitfinex api through communication via websocket after analyzing both providers, bitfinex presents a better developer experience and better documentation.
 
 ## **Stack**:
-- Node.js v16
+- **Node.js v16**
 - Docker
 - Test: jest
 - config: dotenv
