@@ -82,14 +82,18 @@ curl 'http://127.0.0.1:8000/orders/tBTCUSD/prices'
 
 - **2) Simulate order execution**:
 
-Receive a parir name a operation and ammount and return the price if the order is executed, format: `'http://127.0.0.1:8000/market/execute/:pair-name/[BUY/SELL]/:ammount'`
+Receive a pair name a operation and ammount and return the price if the order is executed, format: `'http://127.0.0.1:8000/market/execute/:pair-name/[BUY/SELL]/:ammount'`
 
 ```console
 curl 'http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5'
+curl 'http://127.0.0.1:8000/market/execute/tBTCUSD/SELL/0.5'
 ```
 
+- **3) Simulate order execution with limit BONUS**:
 
+Receive a pair name a operation, ammount, limit and return the price if the order is executed, format: `'http://127.0.0.1:8000/market/execute/:pair-name/[BUY/SELL]/:ammount/limit/:limit-ammount'`
 
-http://127.0.0.1:8000/orders/tBTCUSD/prices
-http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5
+```console
 http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5/limit/100
+http://127.0.0.1:8000/market/execute/tBTCUSD/SELL/0.5/limit/100
+```
