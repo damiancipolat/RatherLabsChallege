@@ -65,7 +65,7 @@ Here we see the main layers of the project.
 #### **Component diagrams**:
 Here we see the component of every layers of the project.
 
-<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="350px" />
+<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="550px" />
 
 sdsadsadsad
 
