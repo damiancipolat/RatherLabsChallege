@@ -25,6 +25,34 @@ TIPS_LIMIT=50
 SERVER_PORT=8000
 ```
 
+### **Comands**:
+These are several useful commands to run the project.
+
+- Run unit test:
+```console
+damian@challenge:~$ npm test
+```
+- Run coverage report.
+```console
+damian@challenge:~$ npm run coverage
+```
+- Run app in development mode:
+```console
+damian@challenge:~$ npm run dev
+```
+- Run app:
+```console
+damian@challenge:~$ npm start
+```
+
+- Create and run docker container:
+```console
+damian@challenge:~$ npm run build
+```
+
+
+
+
 http://127.0.0.1:8000/orders/tBTCUSD/prices
 http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5
 http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5/limit/100
