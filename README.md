@@ -59,11 +59,11 @@ The project is divided into several layers, each with different responsibilities
 
 #### Layer diagrams:
 Here we see the main layers of the project.
+<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/layers.png?raw=true" width="250px" />
 
-<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/layers.png?raw=true" width="350px" align="right" />
+sdsadsadsad
 
-<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="150px" align="right" />
-
+<img src="https://github.com/damiancipolat/RatherLabsChallege/blob/main/doc/complete.png?raw=true" width="150px" />
 
 http://127.0.0.1:8000/orders/tBTCUSD/prices
 http://127.0.0.1:8000/market/execute/tBTCUSD/BUY/0.5
