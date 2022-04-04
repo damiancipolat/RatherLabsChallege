@@ -3,6 +3,13 @@
 # RatherLabs challenge - Membrane
 In this challenge I solve the statement proposed in the following pdf, which consists of creating a market status api.
 
+- [Decitions](#exchange-provider)
+- [Stack](#stack)
+- [Configuration](#configuration)
+- [Commands](#commands)
+- [Architecture](#architecture)
+- [Endpoints](#endpoints)
+
 ### Exchange provider:
 For this challenge, I decided to use the bitfinex api through communication via websocket after analyzing both providers, bitfinex presents a better developer experience and better documentation.
 
